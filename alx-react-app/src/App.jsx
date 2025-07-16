@@ -5,14 +5,17 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
 
-// Your existing import
+// Previous task
 import WelcomeMessage from './components/WelcomeMessage';
 
-// --- NEW IMPORTS FOR THIS TASK ---
+// --- NEW IMPORTS FOR HEADER MAIN CONTENT AND FOOTER TASK ---
 import Header from './components/Header';
 import MainContent from './components/MainContent';
 import Footer from './components/Footer';
 // ---------------------------------
+
+// Import the new UserProfile component
+import UserProfile from './components/UserProfile';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -54,7 +57,19 @@ function App() {
       <Header />
       <MainContent />
       <Footer />
-      {/* --------------------------------- */}
+       {/* --- NEW: UserProfile component with props --- */}
+      <UserProfile
+        name="Alice"
+        age={25}
+        bio="Loves hiking and photography"
+      />
+      {/* You can add more UserProfile components with different data if you like! */}
+      <UserProfile
+        name="Bob"
+        age={30}
+        bio="Software engineer and avid gamer"
+      />
+      {/* ------------------------------------------- */}
     </>
   );
 }
