@@ -1,7 +1,7 @@
 // src/App.jsx
 import React from 'react';
 import ProfilePage from './components/ProfilePage';
-import UserContext from './UserContext';
+import UserContext from './components/UserContext';
 import UserProfile from './components/UserProfile'; // <--- NEW: Import UserProfile
 
 

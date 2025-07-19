@@ -2,7 +2,7 @@
 import React, { useContext } from 'react'; // Import the useContext hook
 // Import the UserContext from its location.
 // '../' means go up one directory level (from 'src/components' to 'src').
-import UserContext from '../UserContext';
+import UserContext from './UserContext';
 
 // UserDetails no longer accepts { userData } as a prop.
 function UserDetails() {
