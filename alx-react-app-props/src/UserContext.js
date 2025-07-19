@@ -1,7 +1,9 @@
-// alx-react-app-props/src/UserContext.js
+// src/UserContext.js
 import React from 'react';
 
-// Create and export the UserContext
-const UserContext = React.createContext(null); // You can provide a default value here, but null is fine for now
+// Create and export the UserContext.
+// The `null` is the default value if a consumer tries to access it
+// without a Provider higher up in the component tree.
+const UserContext = React.createContext(null);
 
 export default UserContext;
