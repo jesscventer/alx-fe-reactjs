@@ -17,6 +17,9 @@ import Footer from './components/Footer';
 // Import the new UserProfile component
 import UserProfile from './components/UserProfile';
 
+// Import the new Counter component
+import Counter from './components/Counter';
+
 function App() {
   const [count, setCount] = useState(0);
 
@@ -69,6 +72,7 @@ function App() {
         age={30}
         bio="Software engineer and avid gamer"
       />
+      <Counter />
       {/* ------------------------------------------- */}
     </>
   );
