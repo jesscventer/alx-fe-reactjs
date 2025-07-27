@@ -4,21 +4,18 @@ import { useParams, useNavigate } from 'react-router-dom'; // Import useParams a
 import useRecipeStore from '../store/recipeStore'; // Import the store
 import EditRecipeForm from './EditRecipeForm';     // Import the edit form
 import DeleteRecipeButton from './DeleteRecipeButton'; // Import the delete button
+import FavoriteButton from './FavoriteButton';
 
 const RecipeDetails = () => {
-  // Get the recipeId from the URL parameters
   const { recipeId } = useParams();
-  const navigate = useNavigate(); // Hook to programmatically navigate
-
-  // Convert recipeId to a number, as IDs from Date.now() are numbers
+  const navigate = useNavigate(); 
   const id = parseInt(recipeId);
 
-  // Select the specific recipe from the store based on the ID
-  const recipe = useRecipeStore(state =>
+    const recipe = useRecipeStore(state =>
     state.recipes.find(r => r.id === id)
   );
 
-  const [isEditing, setIsEditing] = useState(false); // State to toggle edit mode
+  const [isEditing, setIsEditing] = useState(false); 
 
   // Handle case where recipe is not found (e.g., direct URL access, deleted recipe)
   if (!recipe) {
@@ -96,6 +93,7 @@ const RecipeDetails = () => {
             >
               Edit Recipe
             </button>
+            <FavoriteButton recipeId={recipe.id} />
             <DeleteRecipeButton recipeId={recipe.id} onDeleteSuccess={handleDeleteSuccess} />
           </div>
         </>
