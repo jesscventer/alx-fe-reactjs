@@ -1,7 +1,7 @@
 // src/components/RecipeList.jsx
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link
 // Import Zustand store.
-// Go up one level (from components to src), then into the store folder.
 import useRecipeStore from '../store/recipeStore'; // Corrected import path
 
 const RecipeList = () => {
@@ -43,10 +43,21 @@ const RecipeList = () => {
         <p style={noRecipesStyle}>No recipes yet. Add some!</p>
       ) : (
         recipes.map(recipe => (
-          <div key={recipe.id} style={recipeCardStyle}>
-            <h3 style={{ color: '#006064', marginBottom: '5px' }}>{recipe.title}</h3>
-            <p style={{ color: '#455A64', fontSize: '0.95em' }}>{recipe.description}</p>
-          </div>
+          // Wrap the recipe card with a Link to its details page
+          <Link
+            to={`/recipes/${recipe.id}`} // Dynamic path with recipe ID
+            key={recipe.id}
+            style={{ textDecoration: 'none', color: 'inherit' }} // Remove link underline
+          >
+            <div
+              style={recipeCardStyle}
+              onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.02)'}
+              onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+            >
+              <h3 style={{ color: '#006064', marginBottom: '5px' }}>{recipe.title}</h3>
+              <p style={{ color: '#455A64', fontSize: '0.95em' }}>{recipe.description}</p>
+            </div>
+          </Link>
         ))
       )}
     </div>
