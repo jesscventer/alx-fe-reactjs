@@ -8,6 +8,7 @@ import AddRecipeForm from './components/AddRecipeForm';
 import RecipeList from './components/RecipeList';
 // Import the new RecipeDetails component
 import RecipeDetails from './components/RecipeDetails';
+import SearchBar from './components/SearchBar'; 
 
 function App() {
   const appContainerStyle = {
@@ -60,6 +61,7 @@ function App() {
           {/* Route for the main list and add form */}
           <Route path="/" element={
             <>
+            <SearchBar />
               <AddRecipeForm />
               <RecipeList />
             </>

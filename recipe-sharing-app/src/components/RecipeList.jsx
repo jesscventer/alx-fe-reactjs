@@ -5,8 +5,11 @@ import { Link } from 'react-router-dom'; // Import Link
 import useRecipeStore from '../store/recipeStore'; // Corrected import path
 
 const RecipeList = () => {
-  // Select the 'recipes' state from Zustand store
-  const recipes = useRecipeStore(state => state.recipes);
+  // Now, select the filteredRecipes from the Zustand store
+  const filteredRecipes = useRecipeStore(state => state.filteredRecipes);
+  // You might also want the searchTerm to display for context, but not strictly necessary for this step
+  const searchTerm = useRecipeStore(state => state.searchTerm);
+
 
   // Inline styles for the component
   const listContainerStyle = {
