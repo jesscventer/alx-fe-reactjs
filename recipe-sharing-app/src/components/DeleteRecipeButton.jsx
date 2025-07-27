@@ -1,6 +1,6 @@
 // src/components/DeleteRecipeButton.jsx
 import React from 'react';
-import useRecipeStore from '../store/recipeStore'; // Import the store
+import useRecipeStore from '../components/recipeStore'; // Import the store
 import { useNavigate } from 'react-router-dom'; // <--- ADD THIS IMPORT
 
 const DeleteRecipeButton = ({ recipeId }) => { // Remove onDeleteSuccess prop, we'll handle navigation internally

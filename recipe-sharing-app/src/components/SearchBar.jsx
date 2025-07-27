@@ -1,6 +1,6 @@
 // src/components/SearchBar.jsx
 import React from 'react';
-import useRecipeStore from '../store/recipeStore'; // Import the store
+import useRecipeStore from '../components/recipeStore'; // Import the store
 
 const SearchBar = () => {
   // Get the setSearchTerm action from the Zustand store

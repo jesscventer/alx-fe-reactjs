@@ -1,7 +1,7 @@
 // src/components/RecipeDetails.jsx
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom'; // Import useParams and useNavigate
-import useRecipeStore from '../store/recipeStore'; // Import the store
+import useRecipeStore from '../components/recipeStore'; // Import the store
 import EditRecipeForm from './EditRecipeForm';     // Import the edit form
 import DeleteRecipeButton from './DeleteRecipeButton'; // Import the delete button
 import FavoriteButton from './FavoriteButton';

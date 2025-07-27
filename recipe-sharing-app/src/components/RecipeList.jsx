@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Import Link
 // Import Zustand store.
-import useRecipeStore from '../store/recipeStore'; // Corrected import path
+import useRecipeStore from '../components/recipeStore'; // Corrected import path
 
 const RecipeList = () => {
   // Now, select the filteredRecipes from the Zustand store

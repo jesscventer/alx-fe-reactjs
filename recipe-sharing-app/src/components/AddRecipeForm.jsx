@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 // Import your Zustand store.
 // Go up one level (from components to src), then into the store folder.
-import useRecipeStore from '../store/recipeStore'; // Corrected import path
+import useRecipeStore from '../components/recipeStore'; // Corrected import path
 
 const AddRecipeForm = () => {
   // Select the 'addRecipe' action from Zustand store

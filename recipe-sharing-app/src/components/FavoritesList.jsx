@@ -1,7 +1,7 @@
 // src/components/FavoritesList.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import useRecipeStore from '../store/recipeStore';
+import useRecipeStore from '../components/recipeStore';
 import FavoriteButton from './FavoriteButton'; 
 
 const FavoritesList = () => {
